@@ -7,55 +7,105 @@
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="font-sans antialiased text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow fixed w-full z-20">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <img src="/logo.png" alt="Agent Forge logo" class="h-8" />
+      <ul class="hidden md:flex space-x-8 text-gray-600">
+        <li><a href="#hero" class="hover:text-gray-900">Home</a></li>
+        <li><a href="#products" class="hover:text-gray-900">Our Products</a></li>
+        <li><a href="#testimonials" class="hover:text-gray-900">Testimonials</a></li>
+        <li><a href="#chatbot" class="hover:text-gray-900">Chatbot</a></li>
+      </ul>
+      <div class="space-x-4">
+        <a href="#hero" class="hidden md:inline-block bg-orange-600 text-white px-4 py-2 rounded-lg hover:bg-orange-500 transition">Book a Call</a>
+        <button class="md:hidden text-gray-600 focus:outline-none" id="mobile-menu-button">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
 
   <!-- Hero Section -->
-  <section id="hero" class="bg-white py-20">
+  <section id="hero" class="bg-gradient-to-r from-gray-900 to-gray-800 text-white pt-32 pb-20">
     <div class="container mx-auto px-6 text-center">
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">Forge Intelligent AI Agents for Your Agency</h1>
-      <p class="text-lg md:text-xl mb-8">Automate lead gen, follow-ups, reporting, and more—zero code, instant impact.</p>
-      <a href="#book-call" class="bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-500 transition">Book a Call</a>
+      <h1 class="text-5xl md:text-6xl font-extrabold mb-4">Forge Intelligent AI Agents, Fast</h1>
+      <p class="text-xl mb-8 max-w-2xl mx-auto">Automate lead-gen, follow-ups, reporting, and more—no code required, instant impact.</p>
+      <a href="#chatbot" class="bg-orange-500 hover:bg-orange-400 text-white px-8 py-3 rounded-lg font-semibold transition mr-4">Try the Demo Chatbot</a>
+      <a href="#contact" class="bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">Book a Call</a>
+    </div>
+  </section>
+
+  <!-- Our Products Section -->
+  <section id="products" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12">Our Products</h2>
+      <div class="grid gap-8 md:grid-cols-3">
+        <div class="bg-white p-8 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="font-semibold text-2xl mb-3">Outreach Agent</h3>
+          <p class="text-gray-600 mb-4">Hyper-personalized cold-email campaigns at the click of a button.</p>
+          <span class="text-orange-600 font-bold">Example: 40% reply rate lift</span>
+        </div>
+        <div class="bg-white p-8 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="font-semibold text-2xl mb-3">Data Fetch Agent</h3>
+          <p class="text-gray-600 mb-4">Connect any API & auto-pull data into your dashboards.</p>
+          <span class="text-orange-600 font-bold">Example: Overnight reporting</span>
+        </div>
+        <div class="bg-white p-8 rounded-lg shadow hover:shadow-lg transition">
+          <h3 class="font-semibold text-2xl mb-3">Workflow Automator</h3>
+          <p class="text-gray-600 mb-4">Streamline tasks across Slack, Gmail, CRMs, and more.</p>
+          <span class="text-orange-600 font-bold">Example: Daily lead alerts</span>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Testimonials Section -->
-  <section id="testimonials" class="py-16">
+  <section id="testimonials" class="py-20">
     <div class="container mx-auto px-6">
-      <h2 class="text-3xl font-bold text-center mb-8">What Our Clients Say</h2>
-      <div class="grid gap-8 md:grid-cols-3">
-        <div class="bg-white p-6 rounded-lg shadow">
-          <p class="mb-4">“Agent Forge AI transformed our outreach: a 40% lift in reply rates in just one week.”</p>
-          <h3 class="font-semibold">Jane Doe</h3>
-          <p class="text-sm text-gray-500">CEO, Acme Agency</p>
+      <h2 class="text-4xl font-bold text-center mb-12">Testimonials</h2>
+      <div class="grid gap-8 md:grid-cols-2">
+        <div class="bg-white p-8 rounded-lg shadow">
+          <p class="italic mb-4">“Agent Forge AI boosted our campaign response by 40% within one week.”</p>
+          <p class="font-semibold">Jane Doe, CEO @ Acme Agency</p>
         </div>
-        <div class="bg-white p-6 rounded-lg shadow">
-          <p class="mb-4">“The no-code agent builder saved us dozens of hours each month. Truly a game-changer.”</p>
-          <h3 class="font-semibold">John Smith</h3>
-          <p class="text-sm text-gray-500">Head of Growth, Beta Marketing</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow">
-          <p class="mb-4">“Seamless deployment and real-time analytics—Agent Forge AI just works.”</p>
-          <h3 class="font-semibold">Emily Lee</h3>
-          <p class="text-sm text-gray-500">COO, Gamma Solutions</p>
+        <div class="bg-white p-8 rounded-lg shadow">
+          <p class="italic mb-4">“No-code agents saved us 20+ hours per month—game changer!”</p>
+          <p class="font-semibold">John Smith, Head of Growth @ Beta Marketing</p>
         </div>
       </div>
-      
     </div>
   </section>
 
-  <!-- Additional Sections Placeholder -->
-  <section id="features" class="py-16 bg-gray-100">
-    <div class="container mx-auto px-6">
-      <!-- Add additional feature or how-it-works content here -->
+  <!-- AI Chatbot Section -->
+  <section id="chatbot" class="py-20 bg-gray-100">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold mb-8">Interactive AI Chatbot Demo</h2>
+      <div id="chat-widget" class="mx-auto max-w-md border border-gray-300 rounded-lg overflow-hidden">
+        <!-- Chatbot widget placeholder -->
+        <script src="/path/to/your-chatbot.js"></script>
+      </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-white py-6">
-    <div class="container mx-auto px-6 text-center text-gray-600">
-      &copy; 2025 Agent Forge. All rights reserved.
+  <!-- Contact / Footer -->
+  <footer id="contact" class="bg-white py-12">
+    <div class="container mx-auto px-6 text-center">
+      <h3 class="text-2xl font-semibold mb-4">Ready to Automate?</h3>
+      <a href="#hero" class="bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-orange-500 transition">Book a Call</a>
     </div>
   </footer>
+
+  <!-- Mobile Menu Script -->
+  <script>
+    const btn = document.getElementById('mobile-menu-button');
+    const menu = document.querySelector('nav ul');
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+  </script>
 
 </body>
 </html>
